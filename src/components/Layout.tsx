@@ -12,6 +12,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="flex h-screen bg-gray-100">
+      {/* Sidebar Navigation */}
       <div className="w-64 bg-white shadow-md">
         <div className="p-4">
           <h1 className="text-2xl font-bold">Kitchen Dashboard</h1>
@@ -19,6 +20,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <nav className="mt-5">
           <Link
             to="/"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+          >
+            Public Home
+          </Link>
+          <Link
+            to="/dashboard"
             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
           >
             Dashboard
@@ -51,7 +58,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </div>
       </div>
-      <div className="flex-1 p-10">{children}</div>
+      
+      {/* Main Content Area */}
+      <div className="flex-1 p-10 overflow-y-auto">{children}</div>
     </div>
   );
 };
