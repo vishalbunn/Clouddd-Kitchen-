@@ -35,6 +35,12 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           >
             Live Menu
           </Link>
+          <Link
+            to="/payment"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+          >
+            Payment
+          </Link>
         </nav>
         <div className="absolute bottom-0 w-full p-4">
           <button
